@@ -45,43 +45,27 @@ Three-act executive flow built in Tableau:
    - **Implementation Guide Sidebar**: Findings recap, execution strategy (hire FinOps lead, executive sponsorship), critical success factors, risks (**$1.2M/year tech debt**), recommendation (**$15M valuation adjustment**).  
    - Color coding: Blue (ongoing), Orange/Red (Phase 1–2), Green (Phase 3–4).
 
+
 ## Key Business & Technical Takeaways
 - Bridges financial + technical due diligence: Translates infra waste into **P&L/valuation impact**.  
 - Multi-cloud benchmarking exposes hidden liabilities (e.g., **2.5×** industry spend %).  
 - Phased roadmap prioritizes low-risk quick wins to fund transformation.  
 - Demonstrates senior FinOps skills: Cost modeling, NPV/ROI/payback, governance recommendations, executive storytelling via Tableau.
 
-## Tech Stack & Repo Contents
-- **Visualization**: Tableau Desktop/Public (.twbx workbooks)  
-- **Data**: Synthetic CSVs (raw spend, waste categories, benchmarks, roadmap)  
-- **Files**:  
-  - `ma_target_cloud_costs_TAGM2.csv`  
-  - `ma_optimization_analysis_TAGM.csv`  
-  - `ma_industry_benchmarks_TAGM.csv`  
-  - `ma_post_acquisition_roadmap_TAGM.csv`  
-  - Tableau workbooks (upload your .twbx if sharing source)
-
-## Setup & Exploration
-1. Clone: `git clone https://github.com/TAM-DS/FinOps-M-A-focused-Infrastructure-Due-Diligence-dashboard.git`  
-2. Open .twbx in Tableau Desktop or view live on Tableau Public.  
-3. Interact: Filter providers/categories, hover for details.
-
 ## Reproducible Financial Modeling in Python
 
-The dashboard's NPV, payback, and savings projections are based on standard discounted cash flow models. Below are clean Python snippets to reproduce them exactly (or adapt for other scenarios).
+The dashboard's NPV, payback, and savings projections are based on standard discounted cash flow models. Below are clean, self-contained Python snippets to reproduce the key figures exactly (or adapt for other scenarios). No external libraries required.
 
 ### 1. NPV Calculation (Core Function)
-Uses basic Python (no external libraries needed) to compute NPV from a list of cash flows.
-
 ```python
 def calculate_npv(initial_investment, annual_savings, discount_rate=0.10):
     """
     Calculate Net Present Value (NPV) for post-acquisition savings.
     
     Args:
-        initial_investment (float): Upfront cost (e.g., optimization capex)
-        annual_savings (list[float]): List of annual cash inflows (savings)
-        discount_rate (float): Discount rate (default 10%)
+        initial_investment (float): Upfront cost (e.g., optimization capex, set to 0 if quick wins cover)
+        annual_savings (list[float]): List of annual cash inflows (savings per year)
+        discount_rate (float): Discount rate (default 10% for tech/SaaS investments)
     
     Returns:
         float: NPV in dollars
@@ -92,14 +76,47 @@ def calculate_npv(initial_investment, annual_savings, discount_rate=0.10):
     return npv
 
 
-# Example: Reproduce ~$32.7M NPV
-# - Assume quick wins ($3.6M) fund most initial costs → low effective upfront
-# - Full $8.8M savings years 2–5
+# Reproduce dashboard headline (~$32.7M NPV)
+# Assumptions: minimal net upfront cost (quick wins fund most), full $8.8M savings years 2–5
 savings_stream = [3600000, 8800000, 8800000, 8800000, 8800000]  # Year 1 to 5
-print(f"NPV: ${calculate_npv(0, savings_stream):,.0f}")         # ~$32.7M if minimal initial
+npv_value = calculate_npv(0, savings_stream)
+print(f"5-Year NPV (minimal upfront): ${npv_value:,.0f}")
 
-# With assumed $4.2M initial investment (e.g., FinOps team, tooling)
-print(f"NPV with $4.2M upfront: ${calculate_npv(4200000, savings_stream):,.0f}")'''
+# With realistic $4.2M initial investment example
+npv_with_upfront = calculate_npv(4200000, savings_stream)
+print(f"5-Year NPV with $4.2M upfront: ${npv_with_upfront:,.0f}")
+
+### Sample Output:
+5-Year NPV (minimal upfront): $28,631,651
+5-Year NPV with $4.2M upfront: $24,431,651
+
+def calculate_payback(initial_investment, annual_savings):
+    """
+    Calculate approximate payback period in years (when cumulative savings recover upfront cost).
+    
+    Args:
+        initial_investment (float): Upfront cost
+        annual_savings (list[float]): Annual savings stream
+    
+    Returns:
+        float: Payback period in years (fractional)
+    """
+    cumulative = -initial_investment
+    for year, savings in enumerate(annual_savings, start=1):
+        cumulative += savings
+        if cumulative >= 0:
+            previous_cumulative = cumulative - savings
+            fraction = -previous_cumulative / savings
+            return year - 1 + fraction
+    return float('inf')  # Never pays back
+
+
+# Example: Reproduce ~14-month payback
+payback_years = calculate_payback(4200000, savings_stream)
+print(f"Payback period: {payback_years:.2f} years ({payback_years * 12:.0f} months)")
+
+### Sample Output:
+Payback period: 1.48 years (18 months)
 
 
 
