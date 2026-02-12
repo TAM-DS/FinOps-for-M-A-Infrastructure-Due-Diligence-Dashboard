@@ -1,0 +1,39 @@
+Date,Service,Cloud_Provider,Environment,Monthly_Cost,Annual_Cost,Optimization_Status,Waste_Amount,Category
+1/1/2024,EC2 Compute,AWS,Production,185000,2220000,Suboptimal,1332000,Compute
+1/1/2024,EC2 Compute,AWS,Development,95000,1140000,High Waste,1026000,Compute
+1/1/2024,EC2 Compute,AWS,Staging,48000,576000,High Waste,518400,Compute
+1/1/2024,RDS Database,AWS,Production,125000,1500000,Optimized,0,Database
+1/1/2024,RDS Database,AWS,Development,42000,504000,High Waste,453600,Database
+1/1/2024,RDS Database,AWS,Staging,28000,336000,High Waste,302400,Database
+1/1/2024,S3 Storage,AWS,Production,35000,420000,Suboptimal,168000,Storage
+1/1/2024,S3 Storage,AWS,Development,18000,216000,High Waste,172800,Storage
+1/1/2024,S3 Storage,AWS,Staging,12000,144000,High Waste,115200,Storage
+1/1/2024,EBS Volumes,AWS,Production,28000,336000,Suboptimal,201600,Storage
+1/1/2024,EBS Volumes,AWS,Development,22000,264000,High Waste,237600,Storage
+1/1/2024,EBS Volumes,AWS,Staging,15000,180000,High Waste,162000,Storage
+1/1/2024,Data Transfer,AWS,Production,85000,1020000,High Waste,918000,Network
+1/1/2024,Data Transfer,AWS,Development,32000,384000,High Waste,345600,Network
+1/1/2024,Lambda Functions,AWS,Production,18000,216000,Optimized,0,Compute
+1/1/2024,Lambda Functions,AWS,Development,8000,96000,Suboptimal,38400,Compute
+1/1/2024,CloudFront CDN,AWS,Production,22000,264000,Optimized,0,Network
+1/1/2024,Elastic Load Balancer,AWS,Production,12000,144000,Suboptimal,57600,Network
+1/1/2024,Elastic Load Balancer,AWS,Development,8000,96000,High Waste,76800,Network
+1/1/2024,ElastiCache,AWS,Production,15000,180000,Optimized,0,Cache
+1/1/2024,ElastiCache,AWS,Development,9000,108000,High Waste,86400,Cache
+1/1/2024,Compute Engine,GCP,Production,95000,1140000,Suboptimal,684000,Compute
+1/1/2024,Compute Engine,GCP,Development,48000,576000,High Waste,518400,Compute
+1/1/2024,BigQuery,GCP,Production,125000,1500000,Optimized,0,Analytics
+1/1/2024,BigQuery,GCP,Development,35000,420000,Suboptimal,168000,Analytics
+1/1/2024,Cloud Storage,GCP,Production,28000,336000,Optimized,0,Storage
+1/1/2024,Cloud Storage,GCP,Development,18000,216000,High Waste,172800,Storage
+1/1/2024,Cloud SQL,GCP,Production,42000,504000,Suboptimal,201600,Database
+1/1/2024,Cloud SQL,GCP,Development,25000,300000,High Waste,240000,Database
+1/1/2024,Cloud Functions,GCP,Production,12000,144000,Optimized,0,Compute
+1/1/2024,Cloud Functions,GCP,Development,6000,72000,Suboptimal,28800,Compute
+1/1/2024,Cloud Pub/Sub,GCP,Production,8000,96000,Optimized,0,Messaging
+1/1/2024,Cloud CDN,GCP,Production,15000,180000,Optimized,0,Network
+1/1/2024,Virtual Machines,Azure,Production,35000,420000,Suboptimal,168000,Compute
+1/1/2024,Virtual Machines,Azure,Development,18000,216000,High Waste,172800,Compute
+1/1/2024,Azure SQL,Azure,Production,28000,336000,Suboptimal,134400,Database
+1/1/2024,Azure Blob Storage,Azure,Production,12000,144000,Suboptimal,57600,Storage
+1/1/2024,Azure Blob Storage,Azure,Development,8000,96000,High Waste,76800,Storage

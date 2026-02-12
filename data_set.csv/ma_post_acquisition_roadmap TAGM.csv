@@ -1,0 +1,32 @@
+Initiative,Phase,Start_Month,Duration_Months,Annual_Savings,Implementation_Cost,Complexity,Risk_Level,Dependencies
+Quick Wins Package,Phase 1,1,1,2808000,50000,Low,Low,None
+Terminate Orphaned Resources,Phase 1,1,0.25,180000,5000,Low,Low,Asset Inventory
+Shutdown Dev/Test After Hours,Phase 1,1,1,2304000,30000,Low,Low,Automation Setup
+Remove Unused Load Balancers,Phase 1,1,0.1,144000,2000,Low,Low,Traffic Validation
+Delete Old Snapshots,Phase 1,1,0.25,96000,3000,Low,Low,Backup Policy Review
+Reclaim Unused Elastic IPs,Phase 1,1,0.1,24000,1000,Low,Low,Network Audit
+Terminate Idle Databases,Phase 1,1,0.5,403200,5000,Low,Medium,Data Validation
+Reclaim RI Waste,Phase 1,1,0.5,324000,10000,Low,Low,RI Analysis
+Reserved Instance Strategy,Phase 2,2,2,1365000,75000,Medium,Medium,Usage Analysis
+Purchase 1Y Reserved Instances,Phase 2,2,1,910000,0,Medium,Low,CFO Approval
+Purchase 3Y Reserved Instances,Phase 2,3,1,455000,0,Medium,Low,Long-term Commitment
+Right-Sizing Program,Phase 2,2,3,868000,120000,Medium,Medium,Performance Monitoring
+Analyze Utilization Patterns,Phase 2,2,1,0,40000,Medium,Low,Monitoring Tools
+Resize Oversized Instances,Phase 2,3,2,868000,80000,Medium,Medium,Testing Required
+Implement Auto-Scaling,Phase 3,4,2,546000,95000,Medium,Medium,Load Testing
+Configure ASGs Production,Phase 3,4,1.5,409500,60000,Medium,Medium,Architecture Review
+Configure ASGs Non-Prod,Phase 3,5,0.5,136500,35000,Low,Low,Production Validation
+Storage Optimization,Phase 3,5,1,134400,45000,Low,Low,Data Classification
+Implement Lifecycle Policies,Phase 3,5,1,134400,45000,Low,Low,Storage Audit
+Multi-Cloud Consolidation,Phase 4,6,6,764400,250000,High,High,Architecture Redesign
+Consolidate Azure to AWS,Phase 4,6,4,470400,180000,High,High,Migration Planning
+Optimize GCP Workloads,Phase 4,8,2,294000,70000,Medium,Medium,Workload Analysis
+Network Architecture Redesign,Phase 4,7,5,652800,320000,High,High,Architecture Team
+Reduce Cross-Region Transfer,Phase 4,7,3,391680,200000,High,High,Application Changes
+Implement CDN Strategy,Phase 4,9,2,261120,120000,Medium,Medium,CDN Selection
+Cost Governance Implementation,Ongoing,1,12,0,180000,Medium,Low,Executive Sponsorship
+Implement Tagging Strategy,Ongoing,1,3,0,60000,Medium,Low,Process Definition
+Setup Cost Allocation,Ongoing,2,2,0,40000,Low,Low,Tagging Complete
+Quarterly Cost Reviews,Ongoing,3,9,0,20000,Low,Low,FinOps Team Hire
+Cost Anomaly Alerting,Ongoing,2,2,0,35000,Medium,Low,Monitoring Platform
+FinOps Team Hiring,Ongoing,1,2,0,25000,Low,Low,Job Descriptions

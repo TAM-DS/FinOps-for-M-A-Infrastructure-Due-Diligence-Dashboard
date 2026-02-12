@@ -1,0 +1,16 @@
+Metric,Target_Company,Industry_Average,Best_In_Class,Gap_From_Average,Status
+Cloud_Spend_As_Pct_Revenue,30,12,8,18,Red Flag
+Waste_Percentage,58,25,12,33,Critical
+Reserved_Instance_Coverage,10,60,75,-50,Critical
+Dev_Test_As_Pct_Total,35,15,10,20,Red Flag
+Multi_Cloud_Efficiency,42,75,85,-33,Poor
+Cost_Per_Customer_Monthly,250,120,80,130,High
+Cost_Per_Employee_Monthly,6250,3000,2000,3250,Very High
+On_Demand_Percentage,90,40,25,50,Inefficient
+Tagging_Compliance,0,80,95,-80,Critical
+Auto_Scaling_Adoption,15,75,90,-60,Poor
+Storage_Lifecycle_Policies,5,70,85,-65,Poor
+Cost_Anomaly_Detection,0,60,85,-60,None
+FinOps_Team_Presence,0,1,1,-1,Missing
+Quarterly_Cost_Reviews,0,4,4,-4,Never
+Cost_Allocation_Accuracy,0,75,90,-75,None

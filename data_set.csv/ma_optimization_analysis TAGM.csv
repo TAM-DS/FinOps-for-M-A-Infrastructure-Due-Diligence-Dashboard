@@ -1,0 +1,16 @@
+Issue_Category,Issue_Description,Annual_Cost_Impact,Severity,Quick_Win,Implementation_Time_Days,Savings_Potential,Discovery_Method
+Dev_Staging_Always_On,Development and staging environments running 24/7 instead of business hours only,2880000,Critical,Yes,30,2304000,Usage Analysis
+On_Demand_Heavy,90% on-demand instances vs 40% reserved instance industry standard,1950000,High,No,90,1365000,Pricing Analysis
+Orphaned_Resources,300+ unattached EBS volumes still being billed monthly,180000,Medium,Yes,7,180000,Asset Inventory
+Oversized_Instances,Compute instances 2-3X larger than actual utilization requires,1240000,High,No,60,868000,Performance Monitoring
+Data_Transfer_Inefficient,Cross-region data transfer 5X industry average due to poor architecture,816000,High,No,120,652800,Network Analysis
+Unused_Load_Balancers,12 elastic load balancers with zero traffic for 6+ months,144000,Low,Yes,3,144000,Traffic Analysis
+Old_Snapshots,1200+ EBS snapshots older than 90 days with no retention policy,96000,Low,Yes,7,96000,Asset Audit
+Multi_Cloud_Sprawl,Redundant services across AWS/GCP/Azure with no clear workload strategy,420000,Medium,No,180,294000,Architecture Review
+No_Tagging_Strategy,Zero cost allocation tags making it impossible to track department spend,0,Critical,No,60,0,Governance Audit
+Reserved_Instance_Waste,Reserved instances purchased but not utilized (wrong instance types),324000,Medium,Yes,14,324000,RI Utilization Report
+Idle_Databases,8 RDS/Cloud SQL instances with <5% utilization for 3+ months,504000,Medium,Yes,14,403200,Database Monitoring
+Legacy_Azure_Apps,Azure workloads that could be consolidated to primary AWS infrastructure,672000,Medium,No,120,470400,Cost Comparison
+No_Auto_Scaling,Production workloads at peak capacity 24/7 with no auto-scaling configured,780000,High,No,45,546000,Capacity Planning
+Unoptimized_Storage_Class,All S3/Cloud Storage using standard tier instead of lifecycle policies,168000,Medium,Yes,21,134400,Storage Analysis
+Public_IP_Waste,200+ elastic IPs allocated but not attached to instances,24000,Low,Yes,3,24000,Network Audit
