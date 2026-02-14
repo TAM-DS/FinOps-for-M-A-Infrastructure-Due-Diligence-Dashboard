@@ -118,7 +118,8 @@ print(f"Payback period: {payback:.2f} years (~{int(payback * 12)} months)")  # �
 5-Year NPV: $31,631,651
 Payback period: 1.17 years (~14 months)
 
-# How to Use These Datasets:In Tableau: Connect → Text/CSV → drag fields to build/recreate views (e.g., Annual_Cost by Cloud_Provider for multi-cloud bars).
+**How to Use These Datasets:** In Tableau: Connect → Text/CSV → drag fields to build/recreate views 
+(e.g., Annual_Cost by Cloud_Provider for multi-cloud bars).
 
 import pandas as pd
 
