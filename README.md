@@ -1,83 +1,109 @@
-# FinOps for M&A: Infrastructure Due Diligence Dashboard
+# FinOps M&A: Infrastructure Due Diligence Framework
+### Turning Cloud Waste into Negotiation Power
 
-**Quantifying Cloud Infrastructure Waste as Acquisition Liability**  
-**Case Study: $200M SaaS Target – Identifying $8.8M Annual Optimization Opportunity**
+---
 
-This project demonstrates a comprehensive infrastructure due diligence framework used to evaluate cloud cost structures in M&A transactions. It translates technical waste into P&L and valuation impacts, enabling data-driven negotiation adjustments and post-close value creation plans.
+> **"The infrastructure was described as optimized. It wasn't.**
+> **56% of $17M in annual cloud spend was waste.**
+> **This dashboard found it — before the deal closed."**
 
-**Key Outcomes Modeled**  
-- Current annual cloud spend: **$17.0M** (multi-cloud: AWS dominant)  
-- Identified waste: **$8.8M/year** (56% of spend)  
-- Optimized steady-state run rate: **$8.2M/year**  
-- Recommended valuation haircut: **$15M** (to reflect infrastructure liability)  
-- Post-acquisition value creation: **$32.7M** 5-year NPV at 10% discount rate  
-- Payback period: **~14 months** (phased implementation with quick wins funding most efforts)  
-- First-90-days quick wins: **$3.6M annualized**
+---
 
-**Interactive Dashboard (Tableau Public)**  
-Explore filters, drill-downs, benchmarks, and phased savings:  
-[**FinOps M&A Due Diligence Dashboard – $8.8M PE Acquisition Case Study**](https://tinyurl.com/47b3z559)
+## The Problem Nobody Talks About in M&A
 
-> All data is **fully synthetic and anonymized** — based on realistic multi-cloud patterns (AWS, GCP, Azure). No real billing data, PII, or proprietary information is included.
+When PE firms and acquirers evaluate a $200M SaaS target, they scrutinize revenue, churn, and EBITDA.
 
-## Executive Summary & Narrative Structure
+They rarely scrutinize cloud infrastructure.
 
-Three-act Tableau dashboard built for PE diligence teams, CTOs, and FinOps leaders:
+That's expensive.
 
-1. **Home – The $8.8M Question**  
-   High-level diagnostics challenging "optimized infrastructure" claims.  
-   - Spend vs. benchmarks: Cost/customer $250/mo (vs. industry $80–$120), cloud as % revenue 30% (vs. 12%).  
-   - Waste identification: 56% ($8.8M) across environments and categories.  
-   - Multi-cloud breakdown: AWS $10.3M | GCP $5.5M | Azure $1.2M.  
-   - Post-optimization value: $8.8M/year savings potential.
+A target claiming "optimized infrastructure" at $17M annual cloud spend was running:
+- Dev and staging environments **24/7** — $2.88M in waste
+- **90% on-demand instances** when 60% reserved is industry standard — $1.95M in avoidable cost
+- Oversized compute nobody had reviewed in months — $1.24M
+- Cross-region egress charges nobody had flagged — $816K
 
-2. **Post-Acquisition – Unlocking Value**  
-   Red flags, quick wins, and financial modeling.  
-   - **5-Year NPV**: $32.7M (conservative ramp, minimal net upfront).  
-   - **Top red flags**: 24/7 dev/staging ($2.88M), 90% on-demand instances ($1.95M), oversized compute ($1.24M), cross-region egress ($816K).  
-   - Reserved instance coverage: 10% vs. industry 60%.  
-   - Service-level waste severity: EC2 Compute & data transfer highest (critical/high).  
-   - Ongoing tech debt exposure: ~$1.2M/year (untagged resources, orphaned assets, sprawl).
+**Total waste identified: $8.8M per year. 56% of total spend.**
 
-3. **Roadmap – Capturing the $8.8M**  
-   12-month phased implementation plan (low → high risk).  
-   - Phase 1 (Months 1–3): Quick wins + governance ($3.6M, low risk).  
-   - Phase 2 (Months 2–4): Reserved instances & right-sizing ($2M, medium).  
-   - Phase 3–4: Consolidation, auto-scaling, architecture redesign ($3.2M cumulative).  
-   - Critical success factors: Executive sponsorship, FinOps lead hire, tagging strategy, weekly governance.
+This project is the framework that found it.
 
-## Skills & Senior-Level Demonstrations
+---
 
-This artifact showcases senior FinOps / cloud financial management capabilities:
+## What This Project Actually Is
 
-- **Strategic Due Diligence** — Bridging technical infra analysis with valuation/P&L impact for M&A.  
-- **Financial Modeling** — NPV, payback, discounted cash flows; conservative assumptions & sensitivity.  
-- **Executive Communication** — Tableau storytelling for C-suite / PE audiences (benchmarks, severity coding, phased ROI).  
-- **Optimization Expertise** — Multi-cloud waste identification (right-sizing, RI strategy, shutdown policies, egress reduction).  
-- **Governance & Execution** — Cost allocation, tagging, anomaly alerting, risk-prioritized roadmaps.  
-- **Reproducibility** — Python models for NPV/payback to enable scenario analysis.
+This isn't a Tableau showcase.
 
-Ideal for roles requiring cloud cost leadership, PE tech diligence, or post-acquisition integration.
+It's a **CFO-grade acquisition intelligence tool** that translates cloud infrastructure waste into P&L impact, valuation adjustments, and post-close value creation — built for PE diligence teams, CTOs, and FinOps leaders who need answers before the wire transfer clears.
 
-## Reproducible Financial Models (Python)
+**The output isn't pretty charts. It's negotiation leverage.**
 
-> ### Note: Exact NPV may vary slightly due to rounding in the dashboard visuals. The model uses conservative 10% discount rate and phased ramp-up for realism. Adjust initial_investment or the savings stream for sensitivity analysis.
+---
 
-## Cleaned Datasets (Synthetic Data Sources)
+## Key Outcomes
 
-To enable full reproducibility and deeper analysis, the repo includes **4 cleaned CSV files** containing the synthetic multi-cloud data used to build the Tableau dashboard and financial models.
+| Metric | Value |
+|--------|-------|
+| Annual cloud spend (pre-optimization) | $17.0M |
+| Waste identified | $8.8M (56% of spend) |
+| Optimized steady-state run rate | $8.2M/year |
+| Recommended valuation haircut | **$15M** |
+| 5-Year NPV (post-acquisition value creation) | **$32.7M** |
+| Payback period | **~14 months** |
+| First-90-day quick wins | $3.6M annualized |
 
-All data is **fully synthetic** (generated to mimic realistic AWS/GCP/Azure billing patterns from a mid-sized SaaS company) with no real account info, costs, or identifiers.
+---
 
-| File Name                  | Description                                                                 | Key Columns (example)                          | Rows (approx.) | Used For |
-|----------------------------|-----------------------------------------------------------------------------|------------------------------------------------|----------------|----------|
-| `ma_target_cloud_costs TAGM2.csv` | Detailed monthly/annual costs by service, provider, environment, waste flags | Date, Service, Cloud_Provider, Environment, Annual_Cost, Waste_Amount, Optimization_Status,| ~40 | Home spend breakdowns, multi-cloud distribution |
-| `ma_post_acquisition_roadmap TAGM.csv` | Phased optimization initiatives with timeline, savings, cost, risk |  Initiative, Phase, Start_Month, Annual_Savings, Implementation_Cost, Risk_Level | ~35  | Roadmap Gantt/timeline, phased savings stacking|
-| `ma_optimization_analysis TAGM.csv`    |  Itemized red flags, issues, severity, quick wins, and savings potential |Issue_Category, Issue_Description, Annual_Cost_Impact, Severity, Quick_Win | ~15 | Post-Acquisition red flags bars, service-level waste severity |
-| `ma_industry_benchmarks TAGM.csv` | Benchmark metrics comparing target to industry/best-in-class  | Metric, Target_Company, Industry_Average, Best_In_Class, Gap_From_Average, Status | ~15 | Home benchmark (e.g., waste %, RI coverage) |
+## The Dashboard: Three Acts
 
+Built as a narrative — not a report. Because PE partners and CTOs don't read reports. They follow stories.
 
-### NPV & Payback Functions
+### Act 1 — The $8.8M Question
+*Home: Challenging "optimized infrastructure" claims before anyone believes them*
+
+- Cost per customer: **$250/mo** (industry benchmark: $80–$120)
+- Cloud as % of revenue: **30%** (industry benchmark: 12%)
+- Reserved instance coverage: **10%** (industry standard: 60%)
+- Multi-cloud breakdown: AWS $10.3M | GCP $5.5M | Azure $1.2M
+
+### Act 2 — Post-Acquisition: Unlocking the Value
+*Red flags, quick wins, and the financial model that changes the negotiation*
+
+- 5-Year NPV: $32.7M at conservative 10% discount rate
+- Top waste categories by severity — EC2 compute and data transfer flagged critical
+- Ongoing tech debt exposure: ~$1.2M/year in untagged resources and sprawl
+
+### Act 3 — The Roadmap: Capturing $8.8M
+*12-month phased implementation — low risk first, quick wins funding everything else*
+
+- **Phase 1 (Months 1–3):** Governance + quick wins → $3.6M annualized, low risk
+- **Phase 2 (Months 2–4):** Reserved instances + right-sizing → $2M
+- **Phases 3–4:** Consolidation, auto-scaling, architecture redesign → $3.2M cumulative
+
+---
+
+## Why This Approach Is Different
+
+Most infrastructure audits answer: *"How much are we spending?"*
+
+This framework answers: *"How much should we be spending — and what does the gap cost us in valuation?"*
+
+That shift — from technical audit to financial instrument — is what makes infrastructure due diligence actually useful in an M&A context.
+
+---
+
+## Tech Stack
+
+| Layer | Tools |
+|-------|-------|
+| Visualization & Storytelling | Tableau Public |
+| Financial Modeling | Python (NumPy, Pandas) |
+| Data | 4 synthetic CSV datasets (realistic AWS/GCP/Azure billing patterns) |
+| Reproducibility | Full Python NPV/payback functions included |
+
+---
+
+## Reproducible Financial Models
+
 ```python
 def calculate_npv(initial_investment, annual_savings, discount_rate=0.10):
     """Net Present Value for post-acquisition cloud savings."""
@@ -85,7 +111,6 @@ def calculate_npv(initial_investment, annual_savings, discount_rate=0.10):
     for year, savings in enumerate(annual_savings, start=1):
         npv += savings / (1 + discount_rate) ** year
     return npv
-
 
 def calculate_payback(initial_investment, annual_savings):
     """Payback period in years (fractional)."""
@@ -98,50 +123,54 @@ def calculate_payback(initial_investment, annual_savings):
             return year - 1 + fraction
     return float('inf')
 
-
-
-
-# Assumptions matching dashboard narrative:
-# - Net upfront investment: ~$1M (quick wins in Phase 1 offset most costs)
-# - Year 1 savings: $4.5M (accelerated from $3.6M quick wins + early ramp)
-# - Years 2–5: full $8.8M annual run-rate savings
+# Conservative assumptions matching dashboard narrative
 savings_stream = [4500000, 8800000, 8800000, 8800000, 8800000]  # Y1–Y5
 
 npv = calculate_npv(1000000, savings_stream)
-print(f"5-Year NPV: ${npv:,.0f}")                # ≈ $32.7M (minor rounding variance possible)
-
+print(f"5-Year NPV: ${npv:,.0f}")         # ≈ $32.7M
 payback = calculate_payback(1000000, savings_stream)
-print(f"Payback period: {payback:.2f} years (~{int(payback * 12)} months)")  # ≈ 1.17 years / 14 months
+print(f"Payback period: {payback:.2f} years (~{int(payback * 12)} months)")  # ≈ 14 months
+```
 
+---
 
-###Sample Output when run:
-5-Year NPV: $31,631,651
-Payback period: 1.17 years (~14 months)
+## Dataset Overview
 
-**How to Use These Datasets:** In Tableau: Connect → Text/CSV → drag fields to build/recreate views 
-(e.g., Annual_Cost by Cloud_Provider for multi-cloud bars).
+All data is fully synthetic — generated to mimic realistic multi-cloud billing patterns from a mid-sized SaaS company. No real account info, costs, or identifiers.
 
-import pandas as pd
+| File | Description | Rows |
+|------|-------------|------|
+| `ma_target_cloud_costs.csv` | Monthly/annual costs by service, provider, environment, waste flags | ~40 |
+| `ma_post_acquisition_roadmap.csv` | Phased initiatives with timeline, savings, cost, risk level | ~35 |
+| `ma_optimization_analysis.csv` | Red flags, severity, quick wins, savings potential | ~15 |
+| `ma_industry_benchmarks.csv` | Target vs. industry vs. best-in-class comparison | ~15 |
 
-# Example: Total waste from cost details
-df_costs = pd.read_csv('ma_target_cloud_costs TAGM2.csv')
-total_waste = df_costs['Waste_Amount'].sum()
-print(f"Total identified waste: ${total_waste:,.0f}")  # Should ≈ $8.8M
+---
 
-# Example: Quick wins savings from roadmap
-df_roadmap = pd.read_csv('ma_post_acquisition_roadmap TAGM.csv')
-quick_wins = df_roadmap[df_roadmap['Phase'] == 'Phase 1']['Annual_Savings'].sum()
-print(f"Phase 1 quick wins annualized: ${quick_wins:,.0f}")  # ≈ $3.6M
+## Who This Is Built For
 
-# Example: Top issues by impact
-df_issues = pd.read_csv('ma_optimization_analysis TAGM.csv')
-print(df_issues.sort_values('Annual_Cost_Impact', ascending=False).head(3)[['Issue_Description', 'Annual_Cost_Impact']])
+This framework is immediately applicable for:
 
+- **PE firms** evaluating infrastructure liability in SaaS acquisitions
+- **CTOs** inheriting cloud environments post-close
+- **FinOps leaders** building diligence capabilities from scratch
+- **CFOs** who need infrastructure risk translated into financial language
 
+---
 
+## The Bigger Picture
 
+I build data infrastructure from scratch — petabyte-scale lakes, medallion architecture, autonomous AI systems running in live financial markets.
 
+This project sits at the intersection of everything I care about:
 
+**Customer problems → Data infrastructure → Financial outcomes.**
 
+Cloud waste isn't a technical problem. It's a business problem wearing a technical disguise.
 
+This framework rips off the disguise.
 
+---
+
+*Built by Tracy | Apex Engineering*
+*[LinkedIn](https://www.linkedin.com/in/tracymanning/) | [Tableau Dashboard](https://public.tableau.com/app/profile/tagm/vizzes)*
