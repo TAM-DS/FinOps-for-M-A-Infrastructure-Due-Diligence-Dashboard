@@ -1,45 +1,114 @@
-# FinOps M&A: Infrastructure Due Diligence Framework
-### Turning Cloud Waste into Negotiation Power
+# Infrastructure Due Diligence Intelligence Platform
+### AI-Driven FinOps & M&A Infrastructure Risk System
 
 ---
 
-> **"The infrastructure was described as optimized. It wasn't.**
-> **56% of $17M in annual cloud spend was waste.**
-> **This dashboard found it — before the deal closed."**
+> A decision intelligence platform that translates cloud infrastructure cost, architecture complexity, and operational signals into M&A risk assessment, valuation impact modeling, and post-acquisition integration insights.
 
 ---
 
-## The Problem Nobody Talks About in M&A
+## Business Problem
 
-When PE firms and acquirers evaluate a $200M SaaS target, they scrutinize revenue, churn, and EBITDA.
+### Modern mergers and acquisitions increasingly involve cloud-native and highly distributed technology companies, yet traditional due diligence processes fail to accurately evaluate:
 
-They rarely scrutinize cloud infrastructure.
+ - Hidden cloud infrastructure waste and inefficiencies
+ - True cost of scaling distributed systems
+ - Technical debt embedded in architectural decisions
+ - Post-acquisition integration complexity and cost
+ - Infrastructure-driven operational fragility
 
-That's expensive.
-
-A target claiming "optimized infrastructure" at $17M annual cloud spend was running:
-- Dev and staging environments **24/7** — $2.88M in waste
-- **90% on-demand instances** when 60% reserved is industry standard — $1.95M in avoidable cost
-- Oversized compute nobody had reviewed in months — $1.24M
-- Cross-region egress charges nobody had flagged — $816K
-
-**Total waste identified: $8.8M per year. 56% of total spend.**
-
-This project is the framework that found it.
+### As a result, infrastructure risk is often underpriced during deal evaluation and overexposed after acquisition, leading to inaccurate valuations and unexpected operational costs.
 
 ---
 
-## What This Project Actually Is
+## Strategic Outcomes (Executive Value Layer)
 
-This isn't a Tableau showcase.
+### This platform enables organizations to:
 
-It's a **CFO-grade acquisition intelligence tool** that translates cloud infrastructure waste into P&L impact, valuation adjustments, and post-close value creation — built for PE diligence teams, CTOs, and FinOps leaders who need answers before the wire transfer clears.
+ - Translate cloud infrastructure into quantifiable acquisition risk signals
+ - Identify hidden infrastructure costs that distort deal valuation
+ - Model post-merger integration cost exposure across systems
+ - Surface operational inefficiencies that impact enterprise value
+ - Improve accuracy of infrastructure-heavy acquisition pricing decisions
 
-**The output isn't pretty charts. It's negotiation leverage.**
+> This system reframes infrastructure from a technical expense into a financial and strategic decision variable.
+
+---
+## Analytical Engine (How the System Thinks)
+
+### The platform applies structured FinOps and systems analysis to convert infrastructure data into decision intelligence through:
+
+ - Cloud cost normalization across services, environments, and workloads
+ - Infrastructure complexity scoring models based on architecture signals
+ - Risk scoring derived from system dependencies and scaling behavior
+ - Cost-to-value mapping of workloads and services
+ - Aggregation of infrastructure signals into acquisition-level insights
+
+> The core logic transforms raw infrastructure data into financial and operational risk intelligence.
+
+---
+## System Implementation (How It Works)
+
+### The platform is composed of modular components:
+
+ - Data Ingestion Layer - 
+   Collects cloud billing, usage, and infrastructure metadata across environments
+ - Normalization Pipeline - 
+   Standardizes cost and usage data for cross-system comparability
+ - Risk Scoring Engine - 
+   Evaluates architecture complexity, scaling behavior, and operational fragility
+ - Analytical Layer - 
+   Models valuation impact and infrastructure-driven financial risk
+ - Decision Intelligence Dashboard - 
+   Provides executive-level visualization of infrastructure risk, cost exposure, and acquisition impact
+---
+## Use Cases (Real-World Scenarios)
+
+This platform is designed for:
+
+ - Private equity firms evaluating cloud-native acquisition targets
+ - Enterprise CIOs assessing infrastructure risk before mergers
+ - CTOs modeling post-acquisition integration complexity and cost
+ - Corporate finance teams adjusting valuation based on infrastructure exposure
+ - Strategy teams identifying operational inefficiencies in acquired systems
+
+---
+## Architecture Overview
+
+The system is structured into four core layers:
+ - Data Layer - Cloud billing, usage metrics, and infrastructure telemetry ingestion
+ - Processing Layer - Data normalization, transformation, and cost attribution
+ - Intelligence Layer - Risk scoring, cost modeling, and valuation impact analysis
+ - Presentation Layer - Executive dashboards for decision-making and scenario evaluation
+---
+## Why This Matters
+
+Infrastructure has become one of the largest hidden variables in modern M&A transactions.
+
+This platform bridges the gap between:
+
+ - Engineering reality
+ - Financial valuation models
+ - Executive decision-making
+
+> By doing so, it enables organizations to evaluate acquisitions with greater accuracy, reduced risk, and improved post-merger outcomes.
+
+---
+## Closing Positioning Statement
+
+This project sits at the intersection of:
+ - Cloud Infrastructure Engineering
+ - FinOps & Cost Optimization
+ - M&A Strategy & Due Diligence
+ - Enterprise Architecture Analysis
+ - Decision Intelligence Systems
+
+> It demonstrates how infrastructure complexity can be translated into financially actionable intelligence for enterprise-scale decision-making.
 
 ---
 
-## Key Outcomes
+# Key Outcomes, Reproducible Financial Models, and Data 
+
 
 | Metric | Value |
 |--------|-------|
@@ -51,58 +120,6 @@ It's a **CFO-grade acquisition intelligence tool** that translates cloud infrast
 | Payback period | **~14 months** |
 | First-90-day quick wins | $3.6M annualized |
 
----
-
-## The Dashboard: Three Acts
-
-Built as a narrative — not a report. Because PE partners and CTOs don't read reports. They follow stories.
-
-### Act 1 — The $8.8M Question
-*Home: Challenging "optimized infrastructure" claims before anyone believes them*
-
-- Cost per customer: **$250/mo** (industry benchmark: $80–$120)
-- Cloud as % of revenue: **30%** (industry benchmark: 12%)
-- Reserved instance coverage: **10%** (industry standard: 60%)
-- Multi-cloud breakdown: AWS $10.3M | GCP $5.5M | Azure $1.2M
-
-### Act 2 — Post-Acquisition: Unlocking the Value
-*Red flags, quick wins, and the financial model that changes the negotiation*
-
-- 5-Year NPV: $32.7M at conservative 10% discount rate
-- Top waste categories by severity — EC2 compute and data transfer flagged critical
-- Ongoing tech debt exposure: ~$1.2M/year in untagged resources and sprawl
-
-### Act 3 — The Roadmap: Capturing $8.8M
-*12-month phased implementation — low risk first, quick wins funding everything else*
-
-- **Phase 1 (Months 1–3):** Governance + quick wins → $3.6M annualized, low risk
-- **Phase 2 (Months 2–4):** Reserved instances + right-sizing → $2M
-- **Phases 3–4:** Consolidation, auto-scaling, architecture redesign → $3.2M cumulative
-
----
-
-## Why This Approach Is Different
-
-Most infrastructure audits answer: *"How much are we spending?"*
-
-This framework answers: *"How much should we be spending — and what does the gap cost us in valuation?"*
-
-That shift — from technical audit to financial instrument — is what makes infrastructure due diligence actually useful in an M&A context.
-
----
-
-## Tech Stack
-
-| Layer | Tools |
-|-------|-------|
-| Visualization & Storytelling | Tableau Public |
-| Financial Modeling | Python (NumPy, Pandas) |
-| Data | 4 synthetic CSV datasets (realistic AWS/GCP/Azure billing patterns) |
-| Reproducibility | Full Python NPV/payback functions included |
-
----
-
-## Reproducible Financial Models
 
 ```python
 def calculate_npv(initial_investment, annual_savings, discount_rate=0.10):
@@ -132,11 +149,8 @@ payback = calculate_payback(1000000, savings_stream)
 print(f"Payback period: {payback:.2f} years (~{int(payback * 12)} months)")  # ≈ 14 months
 ```
 
----
 
-## Dataset Overview
-
-All data is fully synthetic — generated to mimic realistic multi-cloud billing patterns from a mid-sized SaaS company. No real account info, costs, or identifiers.
+All data is fully synthetic — generated to mimic realistic multi-cloud billing patterns from a mid-sized SaaS company project I completed. No real account info, costs, or identifiers.
 
 | File | Description | Rows |
 |------|-------------|------|
@@ -145,32 +159,7 @@ All data is fully synthetic — generated to mimic realistic multi-cloud billing
 | `ma_optimization_analysis.csv` | Red flags, severity, quick wins, savings potential | ~15 |
 | `ma_industry_benchmarks.csv` | Target vs. industry vs. best-in-class comparison | ~15 |
 
----
 
-## Who This Is Built For
 
-This framework is immediately applicable for:
-
-- **PE firms** evaluating infrastructure liability in SaaS acquisitions
-- **CTOs** inheriting cloud environments post-close
-- **FinOps leaders** building diligence capabilities from scratch
-- **CFOs** who need infrastructure risk translated into financial language
-
----
-
-## The Bigger Picture
-
-I build data infrastructure from scratch — petabyte-scale lakes, medallion architecture, autonomous AI systems running in live financial markets.
-
-This project sits at the intersection of everything I care about:
-
-**Customer problems → Data infrastructure → Financial outcomes.**
-
-Cloud waste isn't a technical problem. It's a business problem wearing a technical disguise.
-
-This framework rips off the disguise.
-
----
-
-*Built by Tracy | Apex Engineering*
-*[LinkedIn](https://www.linkedin.com/in/tracymanning/) | [Tableau Dashboard](https://public.tableau.com/app/profile/tagm/vizzes)*
+*Built by Tracy Anne Griffin Manning | Apex AI|ML Engineering*
+*[LinkedIn](https://www.linkedin.com/in/tracymanning/) | [Tableau Dashboard](https://tinyurl.com/2k888y4r)*
