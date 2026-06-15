@@ -1,3 +1,6 @@
+> Identified $8.8M in cloud waste and recommended a $15M valuation haircut on a $17M infrastructure portfolio.
+
+
 # Infrastructure Due Diligence Intelligence Platform
 
 ![Executive Decision Dashboard](./Images/Home%20$8.8M%20Question.jpg)
