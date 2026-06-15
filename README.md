@@ -1,4 +1,8 @@
 # Infrastructure Due Diligence Intelligence Platform
+
+![Executive Decesion Dashboard](./Images/Home $8.8M Question.jpg)
+
+
 ### AI-Driven FinOps & M&A Infrastructure Risk System
 
 ---
