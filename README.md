@@ -1,17 +1,27 @@
-> Identified $8.8M in cloud waste and recommended a $15M valuation haircut on a $17M infrastructure portfolio.
-
+> Quantified $8.8M in infrastructure waste, resulting in a $15M valuation adjustment and $32.7M in projected post-acquisition value creation.
 
 # Infrastructure Due Diligence Intelligence Platform
 
-![Executive Decision Dashboard](./Images/Home%20$8.8M%20Question.jpg)
-
-
 ### AI-Driven FinOps & M&A Infrastructure Risk System
-
----
 
 > A decision intelligence platform that translates cloud infrastructure cost, architecture complexity, and operational signals into M&A risk assessment, valuation impact modeling, and post-acquisition integration insights.
 
+![Executive Decision Dashboard](./Images/Home%20$8.8M%20Question.jpg)
+
+---
+## Strategic Outcomes
+
+| Metric | Value |
+|--------|-------|
+| Annual cloud spend (pre-optimization) | $17.0M |
+| Waste identified | $8.8M (56% of spend) |
+| Optimized steady-state run rate | $8.2M/year |
+| Infrastructure-friven valuation adjustment | **$15M** |
+| 5-Year NPV (post-acquisition value creation) | **$32.7M** |
+| Payback period | **~14 months** |
+| First-90-day quick wins | $3.6M annualized |
+
+> All figures are derived from synthetic M&A infrastructure due diligence scenarios designed to model realistic multi-cloud enterprise environments.
 ---
 
 ## Business Problem
@@ -43,7 +53,7 @@ This system enables acquisition and enterprise decision-makers to:
 ---
 ## Analytical Engine (How the System Thinks)
 
-### The platform applies structured FinOps and systems analysis to convert infrastructure data into decision intelligence through:
+The platform applies structured FinOps and systems analysis to convert infrastructure data into decision intelligence through:
 
  - Cloud cost normalization across services, environments, and workloads
  - Infrastructure complexity scoring models based on architecture signals
@@ -53,7 +63,7 @@ This system enables acquisition and enterprise decision-makers to:
 > The core logic transforms raw infrastructure data into financial and operational risk intelligence.
 
 ---
-## Analytical Engine (How It Works)
+## Risk & Valuation Modeling Framework
 The platform converts raw infrastructure and cost data into structured decision signals through:
 
  - Cross-environment cloud cost normalization and attribution
@@ -123,19 +133,7 @@ This system sits at the intersection of:
 > It demonstrates how infrastructure can be elevated from operational telemetry to financially actionable acquisition intelligence.
 ---
 
-# Key Outcomes, Reproducible Financial Models, and Data Models
-
-
-| Metric | Value |
-|--------|-------|
-| Annual cloud spend (pre-optimization) | $17.0M |
-| Waste identified | $8.8M (56% of spend) |
-| Optimized steady-state run rate | $8.2M/year |
-| Recommended valuation haircut | **$15M** |
-| 5-Year NPV (post-acquisition value creation) | **$32.7M** |
-| Payback period | **~14 months** |
-| First-90-day quick wins | $3.6M annualized |
-
+# Reproducible Financial Models and Data Models
 
 ```python
 def calculate_npv(initial_investment, annual_savings, discount_rate=0.10):
