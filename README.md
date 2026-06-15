@@ -69,9 +69,9 @@ The system is composed of modular analytical components:
 ---
 ## Key Insight
 
-Infrastructure is not a technical implementation detail—it is a material financial structure that directly influences enterprise valuation, acquisition risk, and post-merger performance.
+#### Infrastructure is not a technical implementation detail—it is a material financial structure that directly influences enterprise valuation, acquisition risk, and post-merger performance.
 
-By making infrastructure measurable in financial terms, organizations can shift from reactive cost management to preemptive deal and investment optimization.
+#### By making infrastructure measurable in financial terms, organizations can shift from reactive cost management to preemptive deal and investment optimization.
 ---
 ## Use Cases (Decision Context)
 
