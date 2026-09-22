@@ -1,179 +1,198 @@
-> Quantified $8.8M in infrastructure waste, resulting in a $15M valuation adjustment and $32.7M in projected post-acquisition value creation.
-
 # Infrastructure Due Diligence Intelligence Platform
+### Evidence-led FinOps for M&A infrastructure risk
 
-### AI-Driven FinOps & M&A Infrastructure Risk System
+> **The question is not simply “How much cloud waste exists?” It is “Which infrastructure findings are real, which are actionable, what will remediation cost, and how should that evidence change the deal thesis?”**
 
-> A decision intelligence platform that translates cloud infrastructure cost, architecture complexity, and operational signals into M&A risk assessment, valuation impact modeling, and post-acquisition integration insights.
+This repository models an infrastructure due-diligence case for a synthetic multi-cloud SaaS acquisition target. It separates **observed cost exposure**, **modeled remediation opportunity**, **financial scenario assumptions**, and **deal-team judgment** so technical findings do not silently become valuation claims.
 
-![Executive Decision Dashboard](./Images/Home%20$8.8M%20Question.jpg)
+## Executive decision summary
 
----
-## Strategic Outcomes
+Every headline metric below is reproducible from the committed synthetic datasets.
 
-| Metric | Value |
-|--------|-------|
-| Annual cloud spend (pre-optimization) | $17.0M |
-| Waste identified | $8.8M (56% of spend) |
-| Optimized steady-state run rate | $8.2M/year |
-| Infrastructure-friven valuation adjustment | **$15M** |
-| 5-Year NPV (post-acquisition value creation) | **$32.7M** |
-| Payback period | **~14 months** |
-| First-90-day quick wins | $3.6M annualized |
+| Decision metric | Verified result | Classification |
+| --- | ---: | --- |
+| Annual cloud run rate | **$17.04M** | Source evidence |
+| Gross waste exposure | **$8.84M** | Source evidence |
+| Waste as share of run rate | **51.9%** | Derived evidence |
+| Residual run rate if all identified waste were removed | **$8.20M** | Derived evidence |
+| Actionable modeled savings backlog | **$7.81M** | Remediation model |
+| Low-friction / quick-win opportunity | **$3.61M annualized** | Remediation model |
+| Modeled implementation cost | **$1.07M** | Roadmap assumption |
+| Staged Year-1 savings capture | **$5.68M** | Financial scenario |
+| 5-year NPV @ 10% discount rate | **$26.59M** | Financial scenario |
 
-> All figures are derived from synthetic M&A infrastructure due diligence scenarios designed to model realistic multi-cloud enterprise environments.
----
+The distinction between **$8.84M of gross waste exposure** and **$7.81M of modeled actionable savings** is intentional. Not every cost signal should automatically be booked as savings.
 
-## Business Problem
+## Due-diligence decision contract
 
-### In modern M&A transactions involving cloud-native companies, infrastructure is one of the largest and least accurately modeled sources of financial risk.
+This project uses four evidence classes:
 
-Traditional due diligence processes fail to quantify:
+1. **Source evidence** — what the synthetic infrastructure data directly shows.
+2. **Derived evidence** — arithmetic derived deterministically from source data.
+3. **Remediation model** — what the optimization analysis says could be captured.
+4. **Deal decision** — valuation, purchase-price adjustment, or go/no-go judgment made by humans using the evidence.
 
- - Hidden cloud infrastructure waste and inefficiencies
- - True cost of scaling distributed systems
- - Technical debt embedded in architectural decisions
- - Post-acquisition integration complexity and cost
- - Infrastructure-driven operational fragility
+That separation matters. A cloud engineer can identify waste; that does **not** independently determine a purchase-price adjustment.
 
-As a result, infrastructure risk is often underpriced during deal evaluation and overexposed after acquisition, leading to inaccurate valuations and unexpected operational costs.
+## What the target data says
 
----
+The synthetic target carries **$17.04M** in annual cloud spend across AWS, GCP, and Azure.
 
-## Strategic Outcomes (Decision Layer)
-This system enables acquisition and enterprise decision-makers to:
+| Provider | Annual spend | Gross waste exposure |
+| --- | ---: | ---: |
+| AWS | $10.344M | $6.212M |
+| GCP | $5.484M | $2.014M |
+| Azure | $1.212M | $0.610M |
 
- - Translate infrastructure signals into valuation-adjusted risk profiles
- - Quantify hidden cloud inefficiency as deal pricing impact
- - Surface post-merger integration cost exposure before transaction close
- - Identify architectural fragility that increases operational risk
- - Improve accuracy of infrastructure-heavy investment decisions
-> The system reframes infrastructure from an operational concern into a financial and strategic pricing variable in M&A decisions.
+Waste is not limited to non-production systems:
 
----
-## Analytical Engine (How the System Thinks)
+| Environment | Annual spend | Gross waste exposure |
+| --- | ---: | ---: |
+| Production | $11.100M | $3.923M |
+| Development | $4.704M | $3.815M |
+| Staging | $1.236M | $1.098M |
 
-The platform applies structured FinOps and systems analysis to convert infrastructure data into decision intelligence through:
+The largest modeled waste categories are compute (**$4.487M**), network (**$1.398M**), storage (**$1.364M**), and databases (**$1.332M**).
 
- - Cloud cost normalization across services, environments, and workloads
- - Infrastructure complexity scoring models based on architecture signals
- - Risk scoring derived from system dependencies and scaling behavior
- - Cost-to-value mapping of workloads and services
- - Aggregation of infrastructure signals into acquisition-level insights
-> The core logic transforms raw infrastructure data into financial and operational risk intelligence.
+## From waste finding to executable remediation
 
----
-## Risk & Valuation Modeling Framework
-The platform converts raw infrastructure and cost data into structured decision signals through:
+The optimization analysis models **$7.806M** of annual savings potential across 15 findings.
 
- - Cross-environment cloud cost normalization and attribution
- - Infrastructure complexity scoring based on architecture signals
- - Risk modeling derived from system dependency and scaling behavior
- - Cost-to-value mapping across services and workloads
- - Aggregation of technical signals into financial risk indicators
-> The core function is to translate infrastructure behavior into decision-grade financial intelligence.
+- **$3.610M** is tagged as quick-win opportunity.
+- **$4.196M** requires deeper engineering, architecture, or commercial work.
+- The modeled roadmap’s executable leaf initiatives reconcile exactly to the **$7.806M** optimization backlog.
+- The difference between gross waste exposure and actionable savings is **$1.030M** and remains explicitly unbooked.
 
----
-## System Implementation (Execution Layer)
+This is the control that prevents an attractive dashboard number from becoming an unsupported financial promise.
 
-The system is composed of modular analytical components:
- - Data Ingestion Layer - Aggregates cloud billing, usage telemetry, and infrastructure metadata
- - Normalization Pipeline - Standardizes cost and usage data across services and environments
- - Risk Scoring Engine - Evaluates architectural complexity, scaling behavior, and operational exposure
- - Valuation Impact Layer - Maps infrastructure inefficiencies to acquisition risk and pricing adjustments
- - Decision Intelligence Interface - Provides executive-level visibility into infrastructure risk and cost exposure 
+## Financial scenario
 
----
-## Key Insight
+The financial model uses the executable roadmap rather than the gross-waste headline.
 
-#### Infrastructure is not a technical implementation detail—it is a material financial structure that directly influences enterprise valuation, acquisition risk, and post-merger performance.
+Scenario assumptions:
 
-#### By making infrastructure measurable in financial terms, organizations can shift from reactive cost management to preemptive deal and investment optimization.
----
-## Use Cases (Decision Context)
+- roadmap implementation cost: **$1.066M**;
+- benefit begins after each initiative’s modeled completion point;
+- Year 1 therefore captures a staged **$5.676M**, not a full year of steady-state savings;
+- Years 2–5 use the reconciled **$7.806M** annual run-rate opportunity;
+- discount rate: **10%**.
 
-This system is applicable to:
+Under those assumptions, modeled 5-year NPV is **$26.59M**.
 
- - Private equity firms evaluating cloud-native acquisition targets
- - Enterprise CIOs assessing infrastructure exposure before mergers
- - CTOs modeling post-acquisition integration complexity and cost
- - Corporate development teams refining valuation assumptions
- - Strategy teams identifying hidden operational liabilities in targets
+The repository deliberately does **not** convert that result into an automatic acquisition price adjustment. Valuation treatment belongs to the deal team and depends on confidence, execution risk, taxes, transaction structure, overlap with other diligence findings, and the buyer’s investment thesis.
 
----
-## Architecture Overview
+## Analytical flow
 
-The system operates across four functional layers:
+```mermaid
+flowchart LR
+    Billing["Target cloud cost inventory"]
+    Findings["Optimization findings"]
+    Roadmap["Post-acquisition roadmap"]
+    Benchmarks["Scenario benchmark inputs"]
 
- - Data Layer: Cloud billing, usage metrics, and infrastructure telemetry ingestion
- - Processing Layer: Normalization, transformation, and cost attribution pipelines
- - Intelligence Layer: Risk scoring, valuation modeling, and infrastructure signal aggregation
- - Decision Layer: Executive dashboards for acquisition risk and investment analysis
+    Validate["Validate & normalize"]
+    Exposure["Gross waste exposure"]
+    Actionable["Actionable savings backlog"]
+    Scenario["Implementation + NPV scenario"]
+    Decision["Due-diligence evidence pack"]
 
----
-## Why This Matters
+    Billing --> Validate
+    Findings --> Validate
+    Roadmap --> Validate
+    Benchmarks --> Validate
 
-Infrastructure complexity has become a first-order variable in enterprise valuation, particularly in cloud-native and AI-driven companies.
+    Validate --> Exposure
+    Validate --> Actionable
+    Actionable --> Scenario
+    Roadmap --> Scenario
 
-This platform bridges the gap between:
- - Engineering reality
- - Financial valuation models
- - Executive investment decision-making
-> By making infrastructure financially explicit, it improves pricing accuracy, reduces post-acquisition surprise risk, and strengthens strategic decision quality.
----
-## Closing Positioning
+    Exposure --> Decision
+    Actionable --> Decision
+    Scenario --> Decision
 
-This system sits at the intersection of:
-
- - Cloud Infrastructure Engineering
- - FinOps & Cost Intelligence
- - M&A Strategy & Due Diligence
- - Enterprise Architecture
- - Decision Intelligence Systems
-> It demonstrates how infrastructure can be elevated from operational telemetry to financially actionable acquisition intelligence.
----
-
-# Reproducible Financial Models and Data Models
-
-```python
-def calculate_npv(initial_investment, annual_savings, discount_rate=0.10):
-    """Net Present Value for post-acquisition cloud savings."""
-    npv = -initial_investment
-    for year, savings in enumerate(annual_savings, start=1):
-        npv += savings / (1 + discount_rate) ** year
-    return npv
-
-def calculate_payback(initial_investment, annual_savings):
-    """Payback period in years (fractional)."""
-    cumulative = -initial_investment
-    for year, savings in enumerate(annual_savings, start=1):
-        cumulative += savings
-        if cumulative >= 0:
-            previous = cumulative - savings
-            fraction = -previous / savings
-            return year - 1 + fraction
-    return float('inf')
-
-# Conservative assumptions matching dashboard narrative
-savings_stream = [4500000, 8800000, 8800000, 8800000, 8800000]  # Y1–Y5
-
-npv = calculate_npv(1000000, savings_stream)
-print(f"5-Year NPV: ${npv:,.0f}")         # ≈ $32.7M
-payback = calculate_payback(1000000, savings_stream)
-print(f"Payback period: {payback:.2f} years (~{int(payback * 12)} months)")  # ≈ 14 months
+    Decision --> Deal["Human deal decision"]
 ```
 
+## Repository structure
 
-All data is fully synthetic — generated to mimic realistic multi-cloud billing patterns from a mid-sized SaaS company project I completed. No real account info, costs, or identifiers.
+```text
+.
+├── data/
+│   ├── target_cloud_costs.csv
+│   ├── optimization_analysis.csv
+│   ├── post_acquisition_roadmap.csv
+│   └── industry_benchmarks.csv
+├── dashboard/
+│   └── infrastructure_due_diligence_dashboard.twbx
+├── docs/
+│   ├── ASSUMPTIONS.md
+│   ├── METRIC_LINEAGE.md
+│   └── images/
+│       ├── executive-dashboard.jpg
+│       ├── implementation-roadmap.jpg
+│       └── post-acquisition-red-flags.jpg
+├── src/
+│   └── infra_due_diligence/
+│       ├── __init__.py
+│       ├── evidence.py
+│       ├── financial_model.py
+│       └── report.py
+├── tests/
+│   ├── test_evidence.py
+│   └── test_financial_model.py
+├── .github/workflows/ci.yml
+├── pyproject.toml
+└── README.md
+```
 
-| File | Description | Rows |
-|------|-------------|------|
-| `ma_target_cloud_costs.csv` | Monthly/annual costs by service, provider, environment, waste flags | ~40 |
-| `ma_post_acquisition_roadmap.csv` | Phased initiatives with timeline, savings, cost, risk level | ~35 |
-| `ma_optimization_analysis.csv` | Red flags, severity, quick wins, savings potential | ~15 |
-| `ma_industry_benchmarks.csv` | Target vs. industry vs. best-in-class comparison | ~15 |
+## Reproduce the evidence
 
+No third-party Python packages are required.
 
+```bash
+PYTHONPATH=src python -m infra_due_diligence.report --data-dir data --verify
+PYTHONPATH=src python -m unittest discover -s tests -v
+```
 
-*Built by Tracy Anne Griffin Manning | Apex AI|ML Engineering*
-*[LinkedIn](https://www.linkedin.com/in/tracymanning/) | [Tableau Dashboard](https://tinyurl.com/2k888y4r)*
+The verifier checks:
+
+- `Annual_Cost == Monthly_Cost × 12` for every target-cost row;
+- gross waste never exceeds annual cost;
+- gross exposure and actionable savings are kept separate;
+- optimization savings reconcile to executable roadmap leaf initiatives;
+- summary roadmap rows are excluded from financial double counting;
+- staged Year-1 capture and 5-year NPV reproduce deterministically;
+- scenario benchmarks remain labeled as synthetic inputs, not external facts.
+
+CI runs source compilation, tests, deterministic verification, and a whitespace check on every push and pull request.
+
+## Tableau case study
+
+The original Tableau workbook and dashboard evidence are preserved in the repository. The dashboard is an executive communication layer; the Python verifier is the analytical control layer.
+
+[View the Tableau Public dashboard](https://public.tableau.com/app/profile/tagm/viz/FinOpsforMAInfrastructureDueDiligenceDashboardCaseStudy/Dashboard1#1)
+
+![Infrastructure due diligence executive dashboard](docs/images/executive-dashboard.jpg)
+
+## Data provenance and limitations
+
+All data is **fully synthetic** and modeled to resemble a multi-cloud SaaS acquisition target. No real account information, customer data, PII, proprietary billing records, or transaction data are included.
+
+The industry benchmark file is also synthetic scenario input. It should not be presented as current external market research.
+
+See [METRIC_LINEAGE.md](docs/METRIC_LINEAGE.md) for exact formulas and [ASSUMPTIONS.md](docs/ASSUMPTIONS.md) for the boundary between evidence and scenario judgment.
+
+## Portfolio framing
+
+This is not a “find cloud waste” demo.
+
+It demonstrates a more difficult capability:
+
+**technical evidence → remediation feasibility → financial modeling → deal-risk communication**
+
+The most important output is not the $8.84M number. It is the ability to show **which number came from where, what assumptions were introduced, and where human judgment must begin.**
+
+---
+
+Built by Tracy Anne Griffin Manning  
+[LinkedIn](https://www.linkedin.com/in/tracymanning/) · [Tableau Dashboard](https://public.tableau.com/app/profile/tagm/viz/FinOpsforMAInfrastructureDueDiligenceDashboardCaseStudy/Dashboard1#1)
