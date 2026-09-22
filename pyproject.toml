@@ -1,0 +1,6 @@
+[project]
+name = "infrastructure-due-diligence-intelligence"
+version = "1.0.0"
+description = "Evidence-led FinOps and M&A infrastructure due-diligence case study."
+requires-python = ">=3.11"
+dependencies = []
