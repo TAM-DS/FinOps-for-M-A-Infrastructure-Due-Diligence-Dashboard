@@ -1,6 +1,6 @@
 # Assumptions and Decision Boundaries
 
-This repository is a synthetic M&A infrastructure due-diligence case study. The purpose of this document is to prevent scenario assumptions from being mistaken for measured facts.
+This public portfolio case is based on an actual M&A infrastructure due-diligence client engagement, but its public financial inputs are synthetic replacements. All reported public outputs were recalculated from those synthetic inputs. The published dollar amounts must never be presented as the actual client's figures, realized client savings, deal valuation, or measured financial impact. The purpose of this document is to prevent synthetic inputs and financial scenarios from being mistaken for actual client facts.
 
 ## Evidence hierarchy
 
