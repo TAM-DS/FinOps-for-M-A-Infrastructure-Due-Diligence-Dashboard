@@ -25,6 +25,36 @@ Every headline metric below is reproducible from the committed synthetic dataset
 
 The distinction between **$8.84M of gross waste exposure** and **$7.81M of modeled actionable savings** is intentional. Not every cost signal should automatically be booked as savings.
 
+## Executive evidence gallery
+
+Four captures from the working local **React + FastAPI executive deal room**. This reference implementation reflects a real consulting engagement, but **every published financial input and output is synthetic**. The images below intentionally include different *what-if* assumptions; those NPV figures are **not interchangeable with the documented $26.59M baseline** (100% benefit capture, 10% discount rate, 0% implementation overrun).
+
+### 01 — Executive financial picture
+
+![Executive overview with synthetic annual cloud cost, gross waste, modeled actionable opportunity, and cloud exposure charts](docs/images/executive-evidence-01-financial-picture.png)
+
+The executive view separates annual run-rate, gross waste, and modeled actionable savings. **Screenshot NPV: $17.86M under a modified scenario**, not the $26.59M published baseline.
+
+### 02 — Challenge the deal economics
+
+![Interactive NPV sensitivity controls beside a discounted annual benefits chart](docs/images/executive-evidence-02-challenge-economics.png)
+
+A client can change modeled benefits, discount rate and implementation-cost overrun and compare the resulting five-year discounted cash flow. This screenshot uses **80% capture, 3% discount rate, and 15% overrun**.
+
+### 03 — Extreme sensitivity scenario
+
+![Alternative sensitivity scenario with 100 percent capture, zero percent discount rate, and 100 percent implementation-cost overrun](docs/images/executive-evidence-03-sensitivity-scenario.png)
+
+A deliberate stress test demonstrates that assumptions matter: **100% capture, 0% discount rate, and 100% implementation-cost overrun** yield about **$34.77M modeled NPV**. The low discount rate boosts the present value of future cash flows, more than offsetting the higher investment cost in this illustration. This is **not** a forecast, valuation, or recommended discount-rate assumption.
+
+### 04 — Executive decision controls
+
+![Decision-control warnings separating gross waste from realizable savings and retaining human valuation authority](docs/images/executive-evidence-04-decision-controls.png)
+
+Visible constraints prevent an attractive model result from being mislabeled as realized savings or automatically converted into a purchase-price adjustment. The **$1.03M gross-waste-to-actionable gap** is excluded from the modeled savings case.
+
+> **Reproducibility:** Use the default settings (100% capture, 10% discount, 0% overrun) to reproduce the **$26.59M five-year modeled NPV** stated in the financial evidence table. All scenarios recalculate from synthetic source data. No actual client financial numbers, transactions, realized savings or deal outcomes are displayed.
+
 ## Due-diligence decision contract
 
 This project uses four evidence classes:
