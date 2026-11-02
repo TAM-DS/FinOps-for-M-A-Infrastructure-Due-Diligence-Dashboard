@@ -17,14 +17,21 @@ jobs:
         with:
           python-version: "3.13"
 
+      - name: Install local dashboard API test dependencies
+        run: python -m pip install -r requirements-dashboard.txt
+
       - name: Compile source
-        run: python -m compileall -q src
+        run: python -m compileall -q src api
 
       - name: Run tests
         run: PYTHONPATH=src python -m unittest discover -s tests -v
 
       - name: Verify diligence metrics
         run: PYTHONPATH=src python -m infra_due_diligence.report --data-dir data --verify
+
+      - name: Build executive dashboard
+        working-directory: frontend
+        run: npm install --no-audit --no-fund && npm run build
 
       - name: Check whitespace
         run: git diff --check

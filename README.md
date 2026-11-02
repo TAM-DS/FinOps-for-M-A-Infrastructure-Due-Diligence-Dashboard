@@ -3,7 +3,9 @@
 
 > **The question is not simply “How much cloud waste exists?” It is “Which infrastructure findings are real, which are actionable, what will remediation cost, and how should that evidence change the deal thesis?”**
 
-This repository models an infrastructure due-diligence case for a synthetic multi-cloud SaaS acquisition target. It separates **observed cost exposure**, **modeled remediation opportunity**, **financial scenario assumptions**, and **deal-team judgment** so technical findings do not silently become valuation claims.
+**Engagement provenance:** This project grew from a real client infrastructure due-diligence engagement. For the public portfolio version, the client financial inputs were replaced with synthetic values, and the outputs were recalculated from those replacement inputs. No published dollar figure represents the client's actual spend, savings, valuation, or deal outcome. The public case models a synthetic multi-cloud SaaS acquisition target while preserving the analytical decision process.
+
+The model separates **synthetic source-data exposure**, **modeled remediation opportunity**, **financial scenario assumptions**, and **deal-team judgment** so technical findings do not silently become valuation claims.
 
 ## Executive decision summary
 
@@ -166,6 +168,50 @@ The verifier checks:
 
 CI runs source compilation, tests, deterministic verification, and a whitespace check on every push and pull request.
 
+## Interactive executive deal room (new)
+
+**Engagement-based architecture; synthetic public finances.** This React + FastAPI application turns the actual consulting problem into a reproducible decision experience. All displayed financial values are calculated from synthetic replacement inputs. No actual client financial figures or realized outcomes are disclosed.
+
+The interface provides:
+
+- Executive KPIs separating **gross waste exposure** from **modeled actionable savings**;
+- AWS / GCP / Azure annual cost and exposure charts without double counting;
+- An interactive **five-year NPV scenario** driven by savings capture (0–100%), discount rate (0–30%), and implementation-cost overrun (0–100%);
+- A five-year discounted benefit chart and decision-control register;
+- Source-evidence validation on every API request and API regression tests;
+- Explicit human authority for deal and valuation decisions.
+
+### Run locally
+
+Requires Python 3.11+, Node.js, and npm. From the repository root:
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements-dashboard.txt
+PYTHONPATH=src python -m uvicorn api.server:app --host 127.0.0.1 --port 8000
+```
+
+In a **second terminal**, also from the repository root:
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+Open **http://127.0.0.1:5173**. The local Vite development server proxies `/api` to FastAPI on port 8000. The API documentation is at **http://127.0.0.1:8000/api/docs**.
+
+To test both the evidence model and API:
+
+```bash
+PYTHONPATH=src python -m unittest discover -s tests -v
+PYTHONPATH=src python -m infra_due_diligence.report --data-dir data --verify
+cd frontend && npm run build
+```
+
+> **Limitations:** This is a local, read-only, synthetic-data reference application, not a production client deployment, deployed cloud service, acquisition valuation, or verified client financial outcome. The NPV model intentionally excludes taxes, financing, execution probabilities, synergy overlap, and the deal team's ultimate decision.
+
 ## Tableau case study
 
 The original Tableau workbook and dashboard evidence are preserved in the repository. The dashboard is an executive communication layer; the Python verifier is the analytical control layer.
@@ -176,7 +222,7 @@ The original Tableau workbook and dashboard evidence are preserved in the reposi
 
 ## Data provenance and limitations
 
-All data is **fully synthetic** and modeled to resemble a multi-cloud SaaS acquisition target. No real account information, customer data, PII, proprietary billing records, or transaction data are included.
+**Real engagement, synthetic public numbers.** The architecture and analytical questions originate in an actual client consulting engagement. All public financial inputs have been replaced with **synthetic scenario values** and all reported figures recalculated from those values. No real account information, customer data, PII, proprietary billing records, or transaction data are included. The published outputs are **not** the client's actual performance, validated client savings, or acquisition valuation.
 
 The industry benchmark file is also synthetic scenario input. It should not be presented as current external market research.
 
