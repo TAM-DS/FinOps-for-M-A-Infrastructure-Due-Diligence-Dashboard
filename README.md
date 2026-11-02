@@ -168,6 +168,50 @@ The verifier checks:
 
 CI runs source compilation, tests, deterministic verification, and a whitespace check on every push and pull request.
 
+## Interactive executive deal room (new)
+
+**Engagement-based architecture; synthetic public finances.** This React + FastAPI application turns the actual consulting problem into a reproducible decision experience. All displayed financial values are calculated from synthetic replacement inputs. No actual client financial figures or realized outcomes are disclosed.
+
+The interface provides:
+
+- Executive KPIs separating **gross waste exposure** from **modeled actionable savings**;
+- AWS / GCP / Azure annual cost and exposure charts without double counting;
+- An interactive **five-year NPV scenario** driven by savings capture (0–100%), discount rate (0–30%), and implementation-cost overrun (0–100%);
+- A five-year discounted benefit chart and decision-control register;
+- Source-evidence validation on every API request and API regression tests;
+- Explicit human authority for deal and valuation decisions.
+
+### Run locally
+
+Requires Python 3.11+, Node.js, and npm. From the repository root:
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements-dashboard.txt
+PYTHONPATH=src python -m uvicorn api.server:app --host 127.0.0.1 --port 8000
+```
+
+In a **second terminal**, also from the repository root:
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+Open **http://127.0.0.1:5173**. The local Vite development server proxies `/api` to FastAPI on port 8000. The API documentation is at **http://127.0.0.1:8000/api/docs**.
+
+To test both the evidence model and API:
+
+```bash
+PYTHONPATH=src python -m unittest discover -s tests -v
+PYTHONPATH=src python -m infra_due_diligence.report --data-dir data --verify
+cd frontend && npm run build
+```
+
+> **Limitations:** This is a local, read-only, synthetic-data reference application, not a production client deployment, deployed cloud service, acquisition valuation, or verified client financial outcome. The NPV model intentionally excludes taxes, financing, execution probabilities, synergy overlap, and the deal team's ultimate decision.
+
 ## Tableau case study
 
 The original Tableau workbook and dashboard evidence are preserved in the repository. The dashboard is an executive communication layer; the Python verifier is the analytical control layer.
