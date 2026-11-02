@@ -3,7 +3,9 @@
 
 > **The question is not simply “How much cloud waste exists?” It is “Which infrastructure findings are real, which are actionable, what will remediation cost, and how should that evidence change the deal thesis?”**
 
-This repository models an infrastructure due-diligence case for a synthetic multi-cloud SaaS acquisition target. It separates **observed cost exposure**, **modeled remediation opportunity**, **financial scenario assumptions**, and **deal-team judgment** so technical findings do not silently become valuation claims.
+**Engagement provenance:** This project grew from a real client infrastructure due-diligence engagement. For the public portfolio version, the client financial inputs were replaced with synthetic values, and the outputs were recalculated from those replacement inputs. No published dollar figure represents the client's actual spend, savings, valuation, or deal outcome. The public case models a synthetic multi-cloud SaaS acquisition target while preserving the analytical decision process.
+
+The model separates **synthetic source-data exposure**, **modeled remediation opportunity**, **financial scenario assumptions**, and **deal-team judgment** so technical findings do not silently become valuation claims.
 
 ## Executive decision summary
 
