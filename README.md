@@ -178,7 +178,7 @@ The original Tableau workbook and dashboard evidence are preserved in the reposi
 
 ## Data provenance and limitations
 
-All data is **fully synthetic** and modeled to resemble a multi-cloud SaaS acquisition target. No real account information, customer data, PII, proprietary billing records, or transaction data are included.
+**Real engagement, synthetic public numbers.** The architecture and analytical questions originate in an actual client consulting engagement. All public financial inputs have been replaced with **synthetic scenario values** and all reported figures recalculated from those values. No real account information, customer data, PII, proprietary billing records, or transaction data are included. The published outputs are **not** the client's actual performance, validated client savings, or acquisition valuation.
 
 The industry benchmark file is also synthetic scenario input. It should not be presented as current external market research.
 
